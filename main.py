@@ -1,6 +1,7 @@
 # Legal Consultant App!
 import streamlit as st
-from langchain.llms import OpenAI
+# from langchain.llms import OpenAI
+import openai as OpenAI
 
 # Title and description
 st.title("Legal Consultant!")
