@@ -1,7 +1,7 @@
 # Legal Consultant App!
 import streamlit as st
 # from langchain.llms import OpenAI
-import openai as OpenAI
+import openai
 
 # Title and description
 st.title("Legal Consultant!")
@@ -31,7 +31,7 @@ st.markdown(
 openai_api_key = st.secrets['OPENAI_API_KEY']
 
 def generate_response(input_text):
-  llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
+  llm = openai(temperature=0.7, openai_api_key=openai_api_key)
   st.info(llm(input_text))
 with st.form('my_form'):
   
