@@ -27,7 +27,7 @@ openai_api_key = st.secrets['OPENAI_API_KEY']
 
 def generate_response(input_text):
     response = openai.Completion.create(
-        engine="davinci",
+        engine="gpt-3.5-turbo-instruct",
         prompt=input_text,
         temperature=0.7,
         max_tokens=150,
